@@ -1,4 +1,4 @@
-package pokemon;
+package dresseur;
 
 import java.util.List;
 

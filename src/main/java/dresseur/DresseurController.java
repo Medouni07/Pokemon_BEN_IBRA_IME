@@ -1,4 +1,4 @@
-package pokemon;
+package dresseur;
 
 import java.util.List;
 
@@ -11,19 +11,19 @@ import org.springframework.web.bind.annotation.RestController;
 import model.Dresseur;
 
 @RestController
-@RequestMapping("/api/ben")
+@RequestMapping("/ben")
 public class DresseurController {
-	
+
 	private final DresseurService dresseurService;
-	
+
 	@Autowired
 	public DresseurController(DresseurService dresseurService) {
 		this.dresseurService = dresseurService;
 	}
-	
+
 	@GetMapping
-	public List<Dresseur> getAllDresseur(){
+	public List<Dresseur> getAllDresseur() {
 		return dresseurService.getAllDresseur();
 	}
-	
+
 }
