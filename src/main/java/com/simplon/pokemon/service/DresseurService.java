@@ -1,11 +1,9 @@
 package com.simplon.pokemon.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.simplon.pokemon.model.Dresseur;
 import com.simplon.pokemon.repository.DresseurRepository;
-
-import antlr.collections.List;
 
 
 
@@ -14,16 +12,31 @@ public class DresseurService {
 	
 	private final DresseurRepository dresseurRepository;
 	
+	@Autowired
 	public DresseurService(DresseurRepository dresseurRepository) {
 		
 		this.dresseurRepository = dresseurRepository;
 	}
 	
-//	public List<Dresseur> gethello(){
-//		
-//	return dresseurRepository.finAll();
-//	}
+
 	
+	//Methode a faire ici
+	
+	
+	//Find All
+	
+	
+	
+	//FindById
+	
+	
+	
+	//FIndByName
+	
+	
+	
+	
+	//FindByDresseur
 	
 
 }
