@@ -45,10 +45,11 @@ public class PokemonService {
 	
 	
 	//FindByDresseur
-      public List<Pokemon> findByDresseur(Gettable DresseurService ){
-  		return pokemonRepository.findByDresseur(DresseurService);
-  	}
+//      public List<Pokemon> findByDresseur(Gettable DresseurService ){
+//  		return pokemonRepository.findByDresseur(DresseurService);
+//  	}
       
 //	FindByType
+      
       
 }

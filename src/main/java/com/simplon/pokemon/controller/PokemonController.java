@@ -3,13 +3,13 @@ package com.simplon.pokemon.controller;
 import java.util.List;
 import java.util.Optional;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.fasterxml.jackson.databind.deser.ValueInstantiator.Gettable;
 import com.simplon.pokemon.model.Pokemon;
 import com.simplon.pokemon.service.PokemonService;
 
@@ -26,13 +26,13 @@ public class PokemonController {
 		
 	}
 	
-//	@GetMapping
-//	public String hello() {
-//		return "This is pokemon";
-//	}
-//	
-	
 	@GetMapping
+	public String hello() {
+		return "This is pokemon";
+	}
+	
+	
+	@GetMapping(path="/all")
 	public List<Pokemon> getAllPokemon(){
 		return pokemonService.getAllPokemon();
 	}
@@ -42,6 +42,8 @@ public class PokemonController {
     public Optional<Pokemon> findDresseurById(@PathVariable Long id) {
         return pokemonService.findPokemonById(id);
     }
-	
+//    public List<Pokemon> findByDresseur(Gettable Gettable){
+//		return pokemonService.findByDresseur(Gettable);
+//	}
 
 }
