@@ -3,8 +3,6 @@ package com.simplon.pokemon.controller;
 import java.util.List;
 import java.util.Optional;
 
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -27,13 +25,13 @@ public class PokemonController {
 		
 	}
 	
-//	@GetMapping
-//	public String hello() {
-//		return "This is pokemon";
-//	}
-//	
-	
 	@GetMapping
+	public String hello() {
+		return "This is pokemon";
+	}
+
+	
+	@GetMapping(path = "/all")
 	public List<Pokemon> getAllPokemon(){
 		return pokemonService.getAllPokemon();
 	}

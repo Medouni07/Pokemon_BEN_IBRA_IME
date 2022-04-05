@@ -14,7 +14,7 @@ import com.simplon.pokemon.model.Pokemon;
 @Repository
 public interface PokemonRepository extends JpaRepository<Pokemon, Long> {
 
-	List<Pokemon> findByDresseur(Gettable dresseurService);
+	//List<Pokemon> findByDresseur(Gettable dresseurService);
 	
 	Optional<Pokemon> findPokemonByName(@Param("name_") String name);
 

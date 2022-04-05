@@ -52,10 +52,10 @@ public class PokemonService {
 		return pokemonRepository.findPokemonByName(name);
 	}
 	
-	//FindByDresseur
-      public List<Pokemon> findByDresseur(Gettable DresseurService ){
-  		return pokemonRepository.findByDresseur(DresseurService);
-  	}
+//	//FindByDresseur
+//      public List<Pokemon> findByDresseur(Gettable DresseurService ){
+//  		return pokemonRepository.findByDresseur(DresseurService);
+//  	}
       
 //	FindByType
       
