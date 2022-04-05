@@ -1,6 +1,10 @@
 package com.simplon.pokemon.service;
 
+
 import java.util.List;
+
+import java.util.Optional;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,12 +28,16 @@ public class PokemonEstDeTypeService {
 	
 	//Find All
 	
-//	public List<PokemonEstDeType> getAllPokemonEstDeType(){
-//		return PokemonEstDeType.findAll();
-//	}
+
+	
 	
 	//FindById
 	
+	public Optional <PokemonEstDeType> findPokemonEstDeTypeById(Long id) {
+		return pokemonEstDeTypeRepository.findById(id);
+    }
+	
+
 	
 	
 	//FIndByName
