@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
 import com.simplon.pokemon.model.PokemonEstDeType;
 import com.simplon.pokemon.service.PokemonEstDeTypeService;
 
@@ -16,6 +17,7 @@ import com.simplon.pokemon.service.PokemonEstDeTypeService;
 public class PokemonEstDeTypeController {
 
 	
+
 	private final PokemonEstDeTypeService pokemonEstDeTypeService;
 	
 	
