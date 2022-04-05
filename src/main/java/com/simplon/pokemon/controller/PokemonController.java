@@ -3,6 +3,7 @@ package com.simplon.pokemon.controller;
 import java.util.List;
 import java.util.Optional;
 
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -44,4 +45,9 @@ public class PokemonController {
     }
 	
 
+	
+//	@GetMapping(path= "/name/{name}")
+//	public Optional<Pokemon> findPokemonByName(@PathVariable String name){
+//		return pokemonService.findPokemonByName(name);
+//	}
 }

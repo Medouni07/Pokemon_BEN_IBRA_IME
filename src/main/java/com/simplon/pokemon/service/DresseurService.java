@@ -41,14 +41,15 @@ public class DresseurService {
     }
 
 	
-	
-	
+
 	//FIndByName
+    
+    
+    public Optional <Dresseur> findDresseurByName(String name) {
+        return dresseurRepository.findDresseurByName(name);
+    }
 	
-	
-	
-	
-	//FindByDresseur
+
 	
 
 }
