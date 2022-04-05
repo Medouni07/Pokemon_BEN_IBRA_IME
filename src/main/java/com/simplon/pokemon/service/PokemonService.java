@@ -8,6 +8,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.fasterxml.jackson.databind.deser.ValueInstantiator.Gettable;
 import com.simplon.pokemon.model.Pokemon;
 import com.simplon.pokemon.repository.PokemonRepository;
 
@@ -44,5 +45,10 @@ public class PokemonService {
 	
 	
 	//FindByDresseur
-	
+      public List<Pokemon> findByDresseur(Gettable DresseurService ){
+  		return pokemonRepository.findByDresseur(DresseurService);
+  	}
+      
+//	FindByType
+      
 }
