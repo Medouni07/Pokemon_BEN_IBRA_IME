@@ -31,3 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### fichiers  spring a ignorer###
+/src/main/resources/application.properties
