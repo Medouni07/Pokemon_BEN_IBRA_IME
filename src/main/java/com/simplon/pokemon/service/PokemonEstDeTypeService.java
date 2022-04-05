@@ -9,12 +9,12 @@ import com.simplon.pokemon.model.PokemonEstDeType;
 import com.simplon.pokemon.repository.PokemonEstDeTypeRepository;
 
 @Service
-public class PokemonEtDeTypeService {
+public class PokemonEstDeTypeService {
 	
 	private final PokemonEstDeTypeRepository pokemonEstDeTypeRepository;
 	
 	@Autowired
-	public PokemonEtDeTypeService(PokemonEstDeTypeRepository pokemonEstDeTypeRepository) {
+	public PokemonEstDeTypeService(PokemonEstDeTypeRepository pokemonEstDeTypeRepository) {
 		this.pokemonEstDeTypeRepository = pokemonEstDeTypeRepository;
 		
 	}

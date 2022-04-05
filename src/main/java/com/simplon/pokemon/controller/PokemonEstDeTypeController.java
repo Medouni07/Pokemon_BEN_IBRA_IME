@@ -5,18 +5,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.simplon.pokemon.service.PokemonEtDeTypeService;
+import com.simplon.pokemon.service.PokemonEstDeTypeService;
 
 @RestController
 @RequestMapping("/api/pokemonEstDeType")
 public class PokemonEstDeTypeController {
 
 	
-	private final PokemonEtDeTypeService pokemonEtDeTypeService;
+	private final PokemonEstDeTypeService pokemonEtDeTypeService;
 	
 	
 	@Autowired
-	public PokemonEstDeTypeController(PokemonEtDeTypeService pokemonEtDeTypeService) {
+	public PokemonEstDeTypeController(PokemonEstDeTypeService pokemonEtDeTypeService) {
 		this.pokemonEtDeTypeService = pokemonEtDeTypeService;
 		
 	}
