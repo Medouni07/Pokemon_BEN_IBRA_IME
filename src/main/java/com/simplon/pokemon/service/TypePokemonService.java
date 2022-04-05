@@ -1,8 +1,11 @@
 package com.simplon.pokemon.service;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.simplon.pokemon.model.TypePokemon;
 import com.simplon.pokemon.repository.TypePokemonRepository;
 
 @Service
@@ -25,6 +28,11 @@ public class TypePokemonService {
 	
 	
 	//FindById
+	
+	  public Optional <TypePokemon> findTypePokemonById(Long id) {
+			return typePokemonRepository.findById(id);
+	    }
+		
 	
 	
 	

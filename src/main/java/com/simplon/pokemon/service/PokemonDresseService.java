@@ -1,8 +1,11 @@
 package com.simplon.pokemon.service;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.simplon.pokemon.model.PokemonDresse;
 import com.simplon.pokemon.repository.PokemonDresseRepository;
 
 @Service
@@ -26,7 +29,13 @@ public class PokemonDresseService {
 	
 	
 	
+	
 	//FindById
+	
+	public Optional <PokemonDresse> findPokemonDresseById(Long id) {
+        return pokemonDresseRepository.findById(id);
+    }
+
 	
 	
 	

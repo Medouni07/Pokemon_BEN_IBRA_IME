@@ -1,17 +1,20 @@
 package com.simplon.pokemon.service;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.simplon.pokemon.model.PokemonEstDeType;
 import com.simplon.pokemon.repository.PokemonEstDeTypeRepository;
 
 @Service
-public class PokemonEtDeTypeService {
+public class PokemonEstDeTypeService {
 	
 	private final PokemonEstDeTypeRepository pokemonEstDeTypeRepository;
 	
 	@Autowired
-	public PokemonEtDeTypeService(PokemonEstDeTypeRepository pokemonEstDeTypeRepository) {
+	public PokemonEstDeTypeService(PokemonEstDeTypeRepository pokemonEstDeTypeRepository) {
 		this.pokemonEstDeTypeRepository = pokemonEstDeTypeRepository;
 		
 	}
@@ -24,6 +27,10 @@ public class PokemonEtDeTypeService {
 	
 	
 	//FindById
+	
+	public Optional <PokemonEstDeType> findPokemonEstDeTypeById(Long id) {
+		return pokemonEstDeTypeRepository.findById(id);
+    }
 	
 	
 	

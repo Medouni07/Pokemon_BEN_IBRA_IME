@@ -1,10 +1,14 @@
 package com.simplon.pokemon.controller;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.simplon.pokemon.model.TypePokemon;
 import com.simplon.pokemon.service.TypePokemonService;
 
 @RestController
@@ -25,5 +29,10 @@ public class TypePokemonController {
 		return "This is typePokemon";
 	}
 	
+
+	  @GetMapping(path = "/{id}")
+	    public Optional<TypePokemon> findTypePokemonById(@PathVariable Long id) {
+	        return typePokemonService.findTypePokemonById(id);
+	    }
 	
 }
