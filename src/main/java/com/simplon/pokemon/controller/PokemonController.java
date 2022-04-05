@@ -30,9 +30,17 @@ public class PokemonController {
 	}
 	
 
+
     @GetMapping(path = "/{id}")
     public Optional<Pokemon> findDresseurById(@PathVariable Long id) {
         return pokemonService.findPokemonById(id);
     }
 	
+
+	
+//	@GetMapping(path= "/name/{name}")
+//	public Optional<Pokemon> findPokemonByName(@PathVariable String name){
+//		return pokemonService.findPokemonByName(name);
+//	}
+
 }

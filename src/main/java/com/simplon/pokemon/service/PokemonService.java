@@ -37,6 +37,9 @@ public class PokemonService {
 	
 	//FIndByName
 	
+	public Optional<Pokemon> findPokemonByName(String name){
+		return pokemonRepository.findPokemonByName(name);
+	}
 	
 	//FindByDresseur
 	

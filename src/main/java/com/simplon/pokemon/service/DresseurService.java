@@ -33,19 +33,22 @@ public class DresseurService {
 	
 	//FindById
 	
-	public Optional <Dresseur> findDresseurById(Long id) {
+
+
+
+    public Optional <Dresseur> findDresseurById(Long id) {
         return dresseurRepository.findById(id);
     }
 
 	
-	
-	
 	//FIndByName
+    
+    
+    public Optional <Dresseur> findDresseurByName(String name) {
+        return dresseurRepository.findDresseurByName(name);
+    }
 	
-	
-	
-	
-	//FindByDresseur
+
 	
 
 }

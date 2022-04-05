@@ -32,11 +32,17 @@ public class DresseurController {
 	
 	
 	
-    @GetMapping(path = "/{id}")
+   
+	
+
+   @GetMapping(path = "/{id}")
     public Optional<Dresseur> findDresseurById(@PathVariable Long id) {
         return dresseurService.findDresseurById(id);
     }
-	
-	
+   
+   @GetMapping(path = "/name/{name}")
+   public Optional <Dresseur> findDresseurByName(@PathVariable String name) {
+       return dresseurService.findDresseurByName(name);
+   }
 
 }
