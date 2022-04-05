@@ -17,7 +17,6 @@ public class TypePokemonController {
 	@Autowired
 	public TypePokemonController(TypePokemonService typePokemonService) {
 		this.typePokemonService = typePokemonService;
-		
 	}
 	
 	@GetMapping

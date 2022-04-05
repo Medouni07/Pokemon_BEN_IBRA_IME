@@ -1,8 +1,11 @@
 package com.simplon.pokemon.service;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.simplon.pokemon.model.Dresseur;
 import com.simplon.pokemon.repository.DresseurRepository;
 
 
@@ -29,14 +32,20 @@ public class DresseurService {
 	
 	//FindById
 	
-	
+
+
+    public Optional <Dresseur> findDresseurById(Long id) {
+        return dresseurRepository.findById(id);
+    }
 	
 	//FIndByName
+    
+    
+    public Optional <Dresseur> findDresseurByName(String name) {
+        return dresseurRepository.findDresseurByName(name);
+    }
 	
-	
-	
-	
-	//FindByDresseur
+
 	
 
 }
