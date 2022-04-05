@@ -1,7 +1,7 @@
 package com.simplon.pokemon.controller;
 
+import java.util.List;
 import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,15 +25,17 @@ public class DresseurController {
 	}
 	
 
+	
+//	@GetMapping
+//	public String hello() {
+//		return "This is dresseur";
+//	}
 	@GetMapping
-    public String hello() {
-        return "This is dresseur";
-    }
+	public List<Dresseur> getAllDresseur(){
+		return dresseurService.getAllDresseur();
+	}
 	
-	
-	
-   
-	
+
 
    @GetMapping(path = "/{id}")
     public Optional<Dresseur> findDresseurById(@PathVariable Long id) {

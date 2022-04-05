@@ -1,5 +1,8 @@
 package com.simplon.pokemon.controller;
 
+
+import java.util.List;
+
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,9 +26,13 @@ public class TypePokemonController {
 		this.typePokemonService = typePokemonService;
 	}
 	
+//	@GetMapping
+//	public String hello() {
+//		return "This is typePokemon";
+//	}
 	@GetMapping
-	public String hello() {
-		return "This is typePokemon";
+	public List<TypePokemon> getAlltypePokemon(){
+		return typePokemonService.getAlltypePokemon();
 	}
 	
 
@@ -34,4 +41,6 @@ public class TypePokemonController {
 	        return typePokemonService.findTypePokemonById(id);
 	    }
 	
+
+
 }

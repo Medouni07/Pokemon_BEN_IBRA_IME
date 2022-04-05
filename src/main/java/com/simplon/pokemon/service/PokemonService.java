@@ -1,5 +1,14 @@
 package com.simplon.pokemon.service;
 
+
+import java.util.List;
+import java.util.Optional;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.fasterxml.jackson.databind.deser.ValueInstantiator.Gettable;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,11 +29,13 @@ public class PokemonService {
 	}
 	
 	
-	//Methode a faire ici
+	//Methode a faire icis
 	
 	
 	//Find All
-	
+	public List<Pokemon> getAllPokemon(){
+		return pokemonRepository.findAll();
+	}
 	
 	
 	//FindById
@@ -41,6 +52,11 @@ public class PokemonService {
 		return pokemonRepository.findPokemonByName(name);
 	}
 	
-	//FindByDresseur
-	
+//	//FindByDresseur
+//      public List<Pokemon> findByDresseur(Gettable DresseurService ){
+//  		return pokemonRepository.findByDresseur(DresseurService);
+//  	}
+      
+//	FindByType
+      
 }

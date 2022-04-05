@@ -1,5 +1,6 @@
 package com.simplon.pokemon.controller;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,9 +29,13 @@ public class PokemonController {
 	public String hello() {
 		return "This is pokemon";
 	}
+
+	@GetMapping(path = "/all")
+	public List<Pokemon> getAllPokemon(){
+		return pokemonService.getAllPokemon();
+	}
+
 	
-
-
     @GetMapping(path = "/{id}")
     public Optional<Pokemon> findDresseurById(@PathVariable Long id) {
         return pokemonService.findPokemonById(id);
