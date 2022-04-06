@@ -1,5 +1,6 @@
 package com.simplon.pokemon.controller;
 
+
 import java.util.List;
 import java.util.Optional;
 
@@ -38,11 +39,21 @@ public class DresseurController {
 	
 	
     @GetMapping(path = "/{id}")
-    public Optional<Dresseur> findDresseurById(@PathVariable Long id) {
+    public Optional<Dresseur> findDresseurById1(@PathVariable Long id) {
         return dresseurService.findDresseurById(id);
     }
 	
 	
 
+   
+   @GetMapping(path = "/name/{name}")
+   public Optional <Dresseur> findDresseurByName(@PathVariable String name) {
+       return dresseurService.findDresseurByName(name);
+   }
+   
+   @GetMapping(path = "/name/{name}")
+   public Optional <Dresseur> findPokemonByDresseur(@PathVariable String name) {
+       return dresseurService.findPokemonByDresseur(name);
+   }
 
 }
