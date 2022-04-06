@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,7 +30,8 @@ public class PokemonController {
 	public String hello() {
 		return "This is pokemon";
 	}
-
+	
+	@CrossOrigin(allowedHeaders = "http://localhost:8080/api/pokemon/all")
 	@GetMapping(path = "/all")
 	public List<Pokemon> getAllPokemon(){
 		return pokemonService.getAllPokemon();

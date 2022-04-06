@@ -30,7 +30,7 @@ public class TypePokemonController {
 //	public String hello() {
 //		return "This is typePokemon";
 //	}
-	@GetMapping
+	@GetMapping(path= "/all")
 	public List<TypePokemon> getAlltypePokemon(){
 		return typePokemonService.getAlltypePokemon();
 	}
@@ -40,6 +40,12 @@ public class TypePokemonController {
 	    public Optional<TypePokemon> findTypePokemonById(@PathVariable Long id) {
 	        return typePokemonService.findTypePokemonById(id);
 	    }
+	
+	  
+	 // @GetMapping(path = "/type/{type}")
+	   // public Optional<TypePokemon> findTypePokemonById(@PathVariable Long id) {
+	       // return typePokemonService.findTypePokemonById(id);
+	   // }
 	
 
 
